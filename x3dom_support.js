@@ -146,7 +146,7 @@ function warpByScalar() {
     }
 
     // adjust the scalar warping by the current scale factor
-    var factor = Number($("#slider1")[0].value);
+    var factor = Number($("#slider")[0].value);
     var shapes = $(".warped");
     for (var i = 0; i < shapes.length; i++) {
         var coord = $(shapes[i]).find("coordinate");
@@ -161,7 +161,7 @@ function warpByScalar() {
 }
 
 function toggleSlider() {
-    document.getElementById('slider1').disabled = !document.getElementById('slider1').disabled;
+    document.getElementById('slider').disabled = !document.getElementById('slider').disabled;
 
     // FIXME: hiding warped shapes not working
     var shapes = $(".warped");
