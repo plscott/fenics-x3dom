@@ -242,12 +242,8 @@ function setupColorContent() {
     // get information from metadata tag:
     var colormap = listToArray3d($("metadata").attr("color_map"));
 
-    // calculate amount of spans to use (subtract 10px for margin)
-    var width = $("#menu-content").width() - 10;
-    var factor = Math.ceil(256.0 / width);
-
-    // add spans to the color map parent with the corresponding color
-    for (var i = 0; i < colormap.length; i += factor) {
+    // add spans to the color map parent with the every other color
+    for (var i = 0; i < colormap.length; i += 2) {
         var r = Math.round(colormap[i][0] * 256);
         var g = Math.round(colormap[i][1] * 256);
         var b = Math.round(colormap[i][2] * 256);
@@ -258,26 +254,12 @@ function setupColorContent() {
         map_parent.appendChild(span);
     }
 
-    // add minimum and maximum values
-    var br = document.createElement("br");
-    map_parent.appendChild(br);
-
-    // calculate margin offset for the min/max labels: half the difference in widths
-    var margin = Math.round(($("#menu-content").width() - (256 / factor)) / 2);
-
-    var min = document.createElement("span");
+    // set minimum and maximum values
     var min_value = Number($("metadata").attr("min_value"));
-    $(min).html(min_value);
-    $(min).css("float", "left");
-    $(min).css("margin-left", margin);
-    map_parent.appendChild(min);
+    $("#min-color-value").html(min_value);
 
-    var max = document.createElement("span");
     var max_value = Number($("metadata").attr("max_value"));
-    $(max).html(max_value);
-    $(max).css("float", "right");
-    $(max).css("margin-right", margin);
-    map_parent.appendChild(max);
+    $("#max-color-value").html(max_value);
 }
 
 /* function to setup the content for the warping section in the menu */
