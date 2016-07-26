@@ -256,10 +256,10 @@ function setupColorContent() {
 
     // set minimum and maximum values
     var min_value = Number($("metadata").attr("min_value"));
-    $("#min-color-value").html(min_value);
+    $("#min-color-value").html(min_value.toPrecision(3));
 
     var max_value = Number($("metadata").attr("max_value"));
-    $("#max-color-value").html(max_value);
+    $("#max-color-value").html(max_value.toPrecision(3));
 }
 
 /* function to setup the content for the warping section in the menu */

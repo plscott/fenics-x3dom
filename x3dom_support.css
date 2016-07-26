@@ -2,22 +2,21 @@
 
 #menu {
 	position: absolute;
-	margin: 1%; 
-	height: auto; 
-	width: auto; 
+	margin: 1%;
 	font-size: 12px;
 }
 
 #menu-items {
+	line-height: normal;
 	background-color: grey;
 	opacity: 0.7;
-	height: auto;
-	width: auto;
 	font-size: 0px;
-	padding: -100px;
 }
 
 #menu-items label {
+	boxSizing: content-box;
+	box-sizing: content-box;
+	display: inline;
 	padding-left: 10px;
 	padding-right: 10px;
 	border: 1px solid black;
@@ -43,11 +42,14 @@
 	background-color: black;
 	opacity: 0.7;
 	color: white;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 5px;
 	text-align: center;
 }
 
+/* for the summary content in the help menu */
+#content-summary {
+	padding-bottom: 5px;
+}
 
 /* for the color content in the help menu */
 #content-color {
@@ -71,20 +73,26 @@
 }
 
 /* for the warping content in the help menu */
-#content-warp {
-	padding-bottom: 0px;
-}
-
-#content-warp form {
-	padding-bottom: 0px;
-}
-
 #content-warp input[type="range"] {
 	margin: auto;
 	width: 50%;
+	display: inline-block;
+}
+
+#content-warp label {
+	font-size: 12px;
+}
+
+#warp-slider-val {
+	position: relative;
+	top: -5px;
 }
 
 /* for the viewpoints section of the menu */
+#content-viewpoints {
+	margin-bottom: 5px;
+}
+
 .viewpoint {
 	display: inline-block;
 	width: 60px;
