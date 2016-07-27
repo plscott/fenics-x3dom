@@ -236,6 +236,7 @@ function setupColorContent() {
         }
     });
 
+    alert("adding color map!");
     // build the color map into the menu-content location
     var map_parent = $("#color-map")[0];
 
