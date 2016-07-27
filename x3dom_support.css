@@ -14,8 +14,6 @@
 }
 
 #menu-items label {
-	boxSizing: content-box;
-	box-sizing: content-box;
 	display: inline;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -91,12 +89,17 @@
 /* for the viewpoints section of the menu */
 #content-viewpoints {
 	margin-bottom: 5px;
+	font-size: 0px;
+}
+
+#content-viewpoints span {
+	font-size: 12px;
 }
 
 .viewpoint {
 	display: inline-block;
 	width: 60px;
-	height: wrap;
 	margin: 5px;
+	font-size: 12px;
 	color: black;
 }
