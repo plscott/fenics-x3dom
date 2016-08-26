@@ -20,6 +20,11 @@
 	font-size: 12px;
 }
 
+#button-options + label {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 #menu-items label:hover {
 	background-color: silver; 
 }
@@ -41,6 +46,26 @@
 	color: white;
 	padding-top: 5px;
 	text-align: center;
+}
+
+/* for the options content in the help menu */
+#content-options {
+	font-size: 0px;
+}
+
+#content-options span {
+	display: inline-block;
+	font-size: 12px;
+	padding-bottom: 3px;
+}
+
+.options label {
+	display: inline-block;
+	width: 60px;
+	padding-left: 2px;
+	font-size: 12px;
+	text-align: left;
+	color: white;
 }
 
 /* for the summary content in the help menu */
@@ -95,6 +120,13 @@
 	position: relative;
 	top: -7px;
 }
+
+/* for the opacity section of the menu */
+#opacity-slider-val {
+	position: relative;
+	top: -7px;
+}
+
 
 /* for the viewpoints section of the menu */
 #content-viewpoints {

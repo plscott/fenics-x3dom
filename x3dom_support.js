@@ -197,6 +197,7 @@ function setupMenu() {
     // next setup the content for each subsection
     setupColorContent();
     setupWarpContent();
+    setupOpacityContent();
     setupViewpointContent();
 }
 
@@ -220,6 +221,25 @@ function setupButtons() {
             } else {
                 $(children[i]).hide();
             }
+        }
+    });
+
+    $("#content-options input[type='checkbox']").change(function() {
+        // get the name from the calling button
+        var name = $(this).attr("id").split("-")[1];
+        
+        // find the parent for the menu-items
+        var parent = $("#menu-items");
+
+        // find the corresponding label element in the menu buttons
+        var selector = "label[for='button-" + name +"']"; 
+        var label = $(parent).children(selector);
+
+        // hide or show
+        if (this.checked) {
+            $(label).show();
+        } else {
+            $(label).hide();
         }
     });
 }
@@ -284,6 +304,27 @@ function setupWarpContent() {
     $("#warp-slider").change(function() {
         $("#warp-slider-val").html($(this).val());
         warpByScalar();
+    });
+}
+
+
+
+// testing
+
+function adjustOpacity(val) {
+    // get the first indexed face set in the scene
+    var faces = $("indexedFaceSet")[0];
+    var parent = faces.parentElement;
+    var material = $(parent).find("material");
+
+    var transparency = 1 - val;
+    material.attr("transparency", transparency);
+}
+
+function setupOpacityContent() {
+    $("#opacity-slider").change(function() {
+        $("#opacity-slider-val").html($(this).val());
+        adjustOpacity(Number($(this).val()));
     });
 }
 
