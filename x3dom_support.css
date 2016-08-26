@@ -51,6 +51,7 @@
 /* for the options content in the help menu */
 #content-options {
 	font-size: 0px;
+	line-height: normal;
 }
 
 #content-options span {
@@ -60,7 +61,10 @@
 }
 
 .options label {
+	margin: 0;
+	padding: 0;
 	display: inline-block;
+	line-height: normal;
 	width: 60px;
 	padding-left: 2px;
 	font-size: 12px;
