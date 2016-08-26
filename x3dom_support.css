@@ -54,6 +54,20 @@
 	line-height: normal;
 }
 
+/*#content-options * {
+	padding: 0;
+	margin: 0;
+}*/
+
+.options input {
+	font-size: 12px;
+}
+
+/*.options label {
+	font-size: 12px;
+	color: white;
+}*/
+
 #content-options span {
 	display: inline-block;
 	font-size: 12px;
@@ -61,10 +75,7 @@
 }
 
 .options label {
-	margin: 0;
-	padding: 0;
 	display: inline-block;
-	line-height: normal;
 	width: 60px;
 	padding-left: 2px;
 	font-size: 12px;
