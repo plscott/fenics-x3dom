@@ -197,7 +197,7 @@ function setupMenu() {
     // next setup the content for each subsection
     setupColorContent();
     setupWarpContent();
-    setupOpacityContent();
+    // setupOpacityContent();
     setupViewpointContent();
 }
 
@@ -243,7 +243,6 @@ function setupButtons() {
         }
     });
 }
-
 
 /* function to setup the content for the color subsection in menu */
 function setupColorContent() {
@@ -307,10 +306,7 @@ function setupWarpContent() {
     });
 }
 
-
-
-// testing
-
+/* adjust opacity */ 
 function adjustOpacity(val) {
     // get the first indexed face set in the scene
     var faces = $("indexedFaceSet")[0];
